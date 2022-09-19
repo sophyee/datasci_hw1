@@ -1,0 +1,40 @@
+---
+title: "p8105_hw1_sjz2120"
+output: github_document
+date: "2022-09-19"
+---
+
+#Prep work
+```{r load_packages}
+library(tidyverse)
+```
+
+#Problem 1
+```{r download_penguins_package eval = FALSE}
+install.packages("palmerpenguins")
+```
+
+```{r penguins_dataset}
+data("penguins", package = "palmerpenguins")
+
+penguins
+```
+
+**Describing the penguins dataset**
+*There are 8 variables in this dataset, including: Species, Island, Bill Length (in mm), Bill Depth (in mm), Flipper Length (in mm), Body Mass (in g), Sex, and Year.
+
+*The dataset contains `nrow(penguins)` rows (`nrow(penguins)` observations) and `ncol(penguins)` columns (`ncol(penguins)` variables).
+
+*The mean flipper length among penguins in this dataset is `mean(pull(penguins, flipper_length_mm)`.
+
+
+```{r penguins_flipper_bill_scatterplot}
+##Create scatterplot of flipper length (y) vs bill length (x)
+ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
+
+##Save scatterplot to project directory
+ggsave("flipper_vs_bill_scatterplot.pdf", height = 4, width = 6)
+```
+
+
+#Problem 2
