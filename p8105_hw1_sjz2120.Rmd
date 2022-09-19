@@ -70,3 +70,7 @@ For the logical variable **greater_zero,** the FALSE values are recoded as 0 whi
 For the character variable **char_vec_10,** all of the values become **NA** because there is no way to recode the character values numerically.
 
 For the factor variable **vec_factor_10,** the three different levels are recoded as numbers. In this case, "high" was recoded as 1, "medium" was recoded as 3, and "low" was recoded as 2.
+
+This helps explain what happens when we try to take the mean of each of these non-numeric variables. For the logical variable **greater_zero,** we're able to take the mean because FALSE=0 and TRUE=1 (they can already be considered numbers).
+
+However, for **char_vec_10** and **vec_factor_10** we are  unable to take their means because their values are not numeric; and only **vec_factor_10** can be converted to a numeric variable after using as.numeric.
