@@ -10,7 +10,7 @@ library(tidyverse)
 ```
 
 #Problem 1
-```{r download_penguins_package eval = FALSE}
+```{r download_penguins_package eval=FALSE}
 install.packages("palmerpenguins")
 ```
 
