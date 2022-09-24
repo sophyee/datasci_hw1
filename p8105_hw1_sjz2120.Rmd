@@ -50,6 +50,7 @@ problem2_df = tibble(
 )
 ```
 
+
 ```{r try_to_take_means}
 mean(pull(problem2_df, rand_samp_10))
 mean(pull(problem2_df, greater_zero))
